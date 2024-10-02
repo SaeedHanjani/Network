@@ -5,11 +5,11 @@ interface sstp-client add name=sstp-out1 connect-to=80.191.11.217 user=user1 pas
 ### To configure an SSTP (Secure Socket Tunneling Protocol) tunnel between two MikroTik routers, follow these steps. SSTP is commonly used for VPN connections and works over HTTPS, providing security using SSL/TLS
 
 
-####Step 1: Ensure Both Routers Have Public IPs
+#### Step 1: Ensure Both Routers Have Public IPs
 Ensure that both MikroTik routers have public IP addresses (or at least the one acting as the server) and the necessary firewall/NAT rules to allow SSTP traffic.
 
 
-####Step 2: SSTP Server Configuration (on Router 1)
+#### Step 2: SSTP Server Configuration (on Router 1)
 1. Configure Certificates:
 SSTP uses SSL, which requires a certificate for secure communication. If you don't already have a valid certificate, you can generate a self-signed certificate or use a trusted CA.
 
@@ -22,7 +22,7 @@ Generate a Self-Signed Certificate:
 ```
 
 #### 2. Enable SSTP Server:
-sql
+
 ```
 /interface sstp-server server set enabled=yes default-profile=default encryption=all certificate=server-cert
 Ensure that you set default-profile=default or create a new profile that suits your needs.
@@ -30,7 +30,7 @@ Ensure that you set default-profile=default or create a new profile that suits y
 #### 3. Add PPP User for SSTP Authentication:
 Add a PPP secret user for authentication.
 
-csharp
+
 ```
 /ppp secret add name=user1 password=pass1 service=sstp profile=default
 ```
