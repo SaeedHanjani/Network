@@ -1,8 +1,3 @@
-GKF
-172.24.220.0/21
-
-ip valid takhtjamshid:87.107.44.18
-
 interface sstp-client add name=sstp-out1 connect-to=80.191.11.217 user=user1 password=pass1 profile=default add-default-route=yes
 
 
