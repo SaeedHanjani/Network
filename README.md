@@ -25,6 +25,7 @@ Generate a Self-Signed Certificate:
 
 ```
 /interface sstp-server server set enabled=yes default-profile=default encryption=all certificate=server-cert
+```
 Ensure that you set default-profile=default or create a new profile that suits your needs.
 
 #### 3. Add PPP User for SSTP Authentication:
