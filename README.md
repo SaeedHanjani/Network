@@ -44,7 +44,8 @@ If you have strict firewall rules, allow SSTP traffic (port 443):
 ```
 
 #### Step 3: SSTP Client Configuration (on Router 2)
-1. Add the SSTP Client:
+
+#### 1. Add the SSTP Client:
 Configure the SSTP client to connect to the server's public IP.
 
 ```
@@ -52,10 +53,10 @@ Configure the SSTP client to connect to the server's public IP.
 ```
 Replace <SERVER_PUBLIC_IP> with the public IP address of Router 1.
 
-####2. Set Routing (Optional):
+#### 2. Set Routing (Optional):
 If you want to route all traffic through the SSTP tunnel, ensure you set the add-default-route=yes. Otherwise, set up specific routes to send only certain traffic through the tunnel.
 
-Step 4: Check Connectivity
+#### Step 4: Check Connectivity
 On the SSTP Server (Router 1), check if the client is connected:
 
 ```
