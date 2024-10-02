@@ -36,7 +36,7 @@ Add a PPP secret user for authentication.
 /ppp secret add name=user1 password=pass1 service=sstp profile=default
 ```
 
-####4. Firewall Rule (Optional):
+#### 4. Firewall Rule (Optional):
 If you have strict firewall rules, allow SSTP traffic (port 443):
 
 ```
